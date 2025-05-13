@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOF Architect - TopoSpace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="{{ url_for('index') }}">TopoSpace <span class="logo-subtitle">AI FOR CHEM</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('index') }}#models_section" class="active">Models</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join Us</a></li>
+                </ul>
+            </nav>
+            <div class="lang-select">
+                <a href="#">EN <span class="arrow-down">▼</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="mof-architect-tool">
+        <div class="container">
+            <h2>MOF Architect</h2>
+            <p class="section-subtitle">Predict the metal node type of MOF. Enter a SMILES string below to get a prediction.</p>
+            
+            <div class="prediction-interface">
+                <textarea id="smiles_input" placeholder="Enter SMILES string here..."></textarea>
+                <button id="predict_button">Predict Structure</button>
+                <div id="prediction_result_area">
+                    <h3>Prediction Result:</h3>
+                    <p id="result_text">Awaiting input...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TopoSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

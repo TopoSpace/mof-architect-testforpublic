@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopoSpace - AI for Chem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">TopoSpace <span class="logo-subtitle">AI FOR CHEM</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#models_section">Models</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join Us</a></li>
+                </ul>
+            </nav>
+            <div class="lang-select">
+                <a href="#">EN <span class="arrow-down">▼</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Driven Innovations<br>in Reticular Chemistry</h1>
+            <p>Advancing MOFs, COFs, HOFs and supramolecular with AI technology.</p>
+        </div>
+    </section>
+
+    <section id="models_section" class="innovative-models">
+        <div class="container">
+            <h2>Our Innovative Models</h2>
+            <p class="section-subtitle">Current innovations that have been achieved in the area of combining AI and Reticular Chemistry</p>
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-card-images">
+                        <img src="{{ url_for('static', filename='images/mof_card_image.png') }}" alt="MOF Structure Image 1">
+                        <img src="{{ url_for('static', filename='images/mof_card_image.png') }}" alt="MOF Structure Image 2">
+                    </div>
+                    <h3>MOF Architect</h3>
+                    <p>Predict the metal node type of MOF, now support Cu-carboxylate MOF.</p>
+                    <a href="{{ url_for('mof_architect_page') }}" class="btn-explore">Explore</a>
+                </div>
+                <!-- Add more model cards here if needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TopoSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
